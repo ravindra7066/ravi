@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angular js</title>
+
+</head>
+<h1>Apply Form a Personal Loan</h1>
+<body>
+<form [formGroup]="myform"> 
+
+	<fieldset formGroupName="name">
+		<div class="form-group">
+         <label>City</label>
+         	<input type="text"
+         	       class="form control"
+
+                   formControlName="City">
+        </div>
+
+        <div class ="form-group">
+         <label>panNumber</label>
+			<input type="text"
+			       class="form-control"
+			       formControlName="panNumber ">
+			 
+		</div>
+
+		<div class="form-group">
+			<label>Full Name:</label>
+			<input type="text"
+			       class="form-control"
+			       formControlName="Full Name">
+			    
+		</div>
+
+
+	<div class="form-group">
+		<label>Email:</label>
+		<input type="email"
+		       class="form-control"
+		       formControlName="email">
+		       
+	</div>
+
+<div class="form-group">
+		<label>Mobile:</label>
+		<input type="text"
+		       class="form-control"
+		       formControlName="Mobile">
+		      
+	</div>
+
+<div class="container text-center">
+	<input type="text" ng2telInput (hasError)="hasError($event)" (ng2telOutput)="getNumber ($enent)" (intlTelInputObject)="telInputObject($event)" (countryChange)="onCountryChange($event)"/>
+	</div>
+	<button type="button" class="btn btn-primary">Submit</button>
+</fieldset>
+	<pre>{{myform.value | json}}</pre>
+
+</form>
+</body>
+</html>
+
